@@ -1,0 +1,36 @@
+.news_and_events {
+  margin-top: 80px;
+  margin-bottom: 145px;
+  .capitalize{
+    text-transform: capitalize;
+  }
+    .news {
+    .news_btns {
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 24px;
+        margin-bottom: 40px;
+
+        .outlined{
+            background-color: transparent;
+            border: 2px solid $bg-primary;
+            color: $bg-primary;
+            text-transform: capitalize;
+        }
+    }
+    &_body{
+        .day{
+            color: $bg-primary;
+        }
+        &_btn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .capitalize{
+                margin: 0 auto;
+            }
+        }
+    }
+  }
+}

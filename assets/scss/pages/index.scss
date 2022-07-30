@@ -1,0 +1,367 @@
+.diplomat__university {
+  padding-top: 120px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .view__gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin: 12px 0px;
+      padding: 12px 0px;
+      color: $bg-primary;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  .video__content {
+    position: relative;
+    img {
+      border-radius: 8px;
+    }
+    .video__icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background-color: $bg-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      img {
+        margin-left: 5px;
+      }
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: anime 2.5s ease-in-out infinite;
+      border-radius: 50%;
+      display: inline-block;
+      background: $bg-primary;
+      z-index: 0;
+    }
+    .anime__delay {
+      animation-delay: 1.25s;
+    }
+  }
+  .diplomat__info {
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: $bg-primary;
+      margin-bottom: 8px;
+      letter-spacing: 4px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 48px;
+      color: $black;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 19px;
+      margin-bottom: 40px;
+      line-height: 27px;
+      color: #6a6a6a;
+    }
+    .diplomat__check__step {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      p {
+        width: 50%;
+        margin-bottom: 16px;
+      }
+      svg {
+        color: $bg-primary;
+        margin-right: 8px;
+      }
+    }
+    .diplomat__score {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 80px;
+      div {
+        margin-top: 20px;
+        &:first-child {
+          h6 {
+            img {
+              right: 50px;
+            }
+          }
+        }
+        h6 {
+          font-family: "Effra" !important;
+          font-weight: 700;
+          font-size: 72px;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            right: -30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes anime {
+  0% {
+    width: 72px;
+    height: 72px;
+    opacity: 1;
+  }
+  100% {
+    width: 146px;
+    height: 146px;
+    opacity: 0.1;
+  }
+}
+
+
+.gain__valuable {
+  margin-top: 120px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__left,
+    &__right {
+      flex: 1;
+      margin-bottom: 50px;
+    }
+    &__left {
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        color: $bg-primary;
+        margin-bottom: 8px;
+        letter-spacing: 2px;
+      }
+      h2 {
+        font-weight: 700;
+        font-size: 56px;
+        max-width: 88%;
+        margin-bottom: 64px;
+      }
+      div {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 16px;
+        gap: 32px;
+        margin-bottom: 40px;
+
+        button {
+          min-width: 88px;
+          height: 88px;
+          border-radius: 50%;
+          background: $bg-primary;
+        }
+        .btn__second {
+          background: #11b792;
+        }
+        .content {
+          flex-direction: column;
+          align-items: start;
+          justify-content: center;
+          gap: 0;
+          margin-bottom: 0;
+
+          h4 {
+            font-weight: 700;
+            font-size: 40px;
+            color: $black;
+            margin-bottom: 6px;
+          }
+          p {
+            color: #6a6a6a;
+            font-weight: 400;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      .img__wallery {
+        &__item {
+          position: relative;
+          &__content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 32px;
+            color: #2d6cb1;
+            h4 {
+              font-weight: 700;
+              font-size: 40px;
+              margin-bottom: 16px;
+            }
+            p {
+              font-weight: 400;
+              font-size: 16px;
+            }
+          }
+          .dark__content {
+            background: rgb(45, 108, 177, 0.78);
+            color: $white;
+          }
+        }
+
+        .second__item {
+          margin-bottom: -70px;
+        }
+      }
+    }
+  }
+}
+
+.faculties {
+  width: 100%;
+  margin-top: 120px;
+  &__wrapper {
+    h2 {
+      font-weight: 700;
+      font-size: 56px;
+      color: $black;
+      margin-bottom: 40px;
+    }
+    &__card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      &__item {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+        img {
+          width: 100%;
+          transition:.5s;
+          cursor: pointer;
+          
+          &:hover{
+            transform: scale(1.1);
+          }
+        }
+        &:before {
+          font-weight: 500;
+          font-size: 32px;
+          color: $white;
+          position: absolute;
+          left: 40px;
+          bottom: 40px;
+          z-index: 1;
+        }
+        &:first-child {
+          &:before {
+            content: "Bachelor of IT";
+          }
+        }
+        &:last-child {
+          &:before {
+            content: "Bachelor of Economics";
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.diplomat__news, .diplomat__events {
+  margin-top: 120px;
+  &__wrapper {
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      color: $bg-primary;
+      text-transform: uppercase;
+    }
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 36px;
+      h2 {
+        font-weight: 700;
+        font-size: 56px;
+        color: $black;
+      }
+    }
+  }
+}
+
+.banner {
+  margin: 80px auto;
+  background: url("~/assets/images/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: small;
+  &__wrapper {
+    width: 100%;
+    height: 576px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    color: $white;
+
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 64px;
+      max-width: 55%;
+      margin-bottom: 24px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 24px;
+      max-width: 50%;
+    }
+  }
+}

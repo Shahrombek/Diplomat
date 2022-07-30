@@ -1,0 +1,68 @@
+// global
+@import "./variables.scss";
+
+// components
+@import "./components/Header/index.scss";
+@import "./components/Header/primary.scss";
+@import "./components/Footer/index.scss";
+@import "./components/Diplomat/news.scss";
+@import "./components/Diplomat/events.scss";
+@import "./components/Menu/layout.scss";
+@import "./components/Menu/content.scss";
+
+// pages
+@import "./pages/index.scss";
+@import "./pages/news_and_events.scss";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Effra";
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant" !important;
+}
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  // overflow-x: hidden;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+.home_wrapper {
+  position: relative;
+  // width: 100%;
+}
+.home_wrapper::after {
+  content: "";
+  width: 171px;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0;
+  // background-image: url("~/assets/icons/borderImg.svg");
+  background-image: url(http://diplomat.university/_nuxt/img/backImage.b5cf600.png);
+  background-repeat: repeat-y;
+  background-size: 171px;
+  background-position: 100%;
+}

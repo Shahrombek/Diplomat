@@ -1,0 +1,35 @@
+.cards {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 24px;
+  &__item {
+    width: 100%;
+    margin-bottom: 12px;
+    &:first-child {
+      grid-column: 1 / span 2;
+      .title {
+        font-size: 28px;
+        max-width: 75%;
+      }
+    }
+    &__img {
+      margin-bottom: 16px;
+      img {
+        cursor: pointer;
+      }
+    }
+    .date {
+      color: #949599;
+      font-size: 16px;
+      margin-top: 16px;
+      display: inline-block;
+      text-transform: capitalize;
+    }
+    .title {
+      font-weight: 500;
+      font-size: 18px;
+      color: $black;
+      margin-top: 8px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.content {
+  &__img {
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 24px;
+      max-height: 576px;
+    }
+  }
+  .content__title {
+    font-weight: 500;
+    font-size: 28px;
+    color: $black;
+    margin-bottom: 16px;
+  }
+  &__body {
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #212721;
+      opacity: 0.8;
+      margin-bottom: 24px;
+    }
+  }
+}
