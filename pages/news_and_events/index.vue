@@ -27,7 +27,8 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
+      
     </div>
     <div class="news_and_events_layout" v-else>
       <MenuLayout :links="[]" title="">
