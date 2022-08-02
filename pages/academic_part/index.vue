@@ -1,7 +1,8 @@
 <template>
   <div>
     <MenuLayout :links="pageLinks" :title="title" @handleClick="click">
-      <MenuContent :item="item" />
+      <AboutTeam v-if="item.id === 2" />
+      <MenuContent v-else :item="item" />
     </MenuLayout>
   </div>
 </template>
@@ -25,8 +26,14 @@ export default {
   },
   methods: {
     click(id) {
-      this.item = AcademicPartData.find((item) => item.id === id);
+      if (id === 2) {
+        this.item = {};
+        this.item.id = id;
+      }else{
+        this.item = AcademicPartData.find((item) => item.id === id);
+      }
 
+      console.log(id, this.item);
     },
   },
   mounted() {

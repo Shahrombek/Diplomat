@@ -199,28 +199,57 @@
         </div>
       </div>
     </div>
-    <div class="container">
-      <Swiper>
-        <SwiperSlide>1</SwiperSlide>
-        <SwiperSlide>2</SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
-        <SwiperSlide>4</SwiperSlide>
-      </Swiper>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam,
-        voluptate non quo est sapiente nam voluptas impedit architecto
-        praesentium molestiae tenetur nihil eius omnis mollitia quia laborum,
-        veritatis quod blanditiis.
-      </p>
+    <div class="partner__swiper">
+      <div class="container">
+        <div class="partner__swiper__wrapper">
+          <h2>Our Partners</h2>
+          <client-only>
+            <swiper :options="swiperOption" class="partner__swiper__wrapper__body">
+              <swiper-slide>
+                <div class="swiper-item">
+                  <img src="~/assets/icons/partner_logo1.svg" alt="logo" />
+                </div>
+              </swiper-slide>
+              <swiper-slide
+                ><div class="swiper-item">
+                  <img src="~/assets/icons/partner_logo2.svg" alt="logo" /></div
+              ></swiper-slide>
+              <swiper-slide
+                ><div class="swiper-item">
+                  <img src="~/assets/icons/partner_logo3.svg" alt="logo" /></div
+              ></swiper-slide>
+              <swiper-slide
+                ><div class="swiper-item">
+                  <img src="~/assets/icons/partner_logo4.svg" alt="logo" /></div
+              ></swiper-slide>
+              <div class="swiper-button-prev" slot="button-prev"></div>
+              <div class="swiper-button-next" slot="button-next"></div>
+            </swiper>
+          </client-only>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import { Swiper, SwiperSlide } from "swiper";
 export default {
   name: "IndexPage",
-  component: { Swiper, SwiperSlide },
+  data() {
+    return {
+      swiperOption: {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 4,
+        autoplay:true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
+    };
+  },
 };
 </script>
 

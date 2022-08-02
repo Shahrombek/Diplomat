@@ -27,7 +27,9 @@
                   </div>
                 </div>
                 <div class="navbar-top-apply">
-                  <button class="btn apply">Apply Now</button>
+                  <button class="btn apply">
+                    <nuxt-link to="/apply">Apply Now</nuxt-link>
+                  </button>
                   <button class="btn search">
                     <fa :icon="['fas', 'magnifying-glass']" />
                   </button>
@@ -51,7 +53,7 @@
                 </div>
                 <ul>
                   <li>
-                    <NuxtLink to="/about_us">About Us</NuxtLink>
+                    <NuxtLink to="/about_us" name="About Us">About Us</NuxtLink>
                   </li>
                   <li>
                     <NuxtLink to="/academic_part">Academic part</NuxtLink>
@@ -85,7 +87,14 @@
           </div>
         </nav>
         <div class="primary__bg">
-            <img  src="~/assets/images/bg_primary.png" alt="">
+          <img src="~/assets/images/bg_primary.png" alt="" />
+          <div class="primary__bg__content">
+            <div class="container">
+              <div class="content__body">
+                <p>{{ this.$route.name }}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -98,15 +107,29 @@ export default {
   data() {
     return {
       is_navbar_active: false,
+      title: "",
     };
   },
- 
+  methods: {
+    routerLink: function (name, num) {
+      console.log(name, num);
+      console.log(this.$route);
+    },
+  },
   mounted() {
+      console.log(this.$route);
+
     window.addEventListener("scroll", () => {
       window.scrollY > 160
         ? (this.is_navbar_active = true)
         : (this.is_navbar_active = false);
     });
+  },
+
+  computed: {
+    getLink: function () {
+      return routerLink(Math.random(), 123);
+    },
   },
 };
 </script>

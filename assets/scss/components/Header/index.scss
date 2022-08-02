@@ -7,8 +7,8 @@
   max-height: 1000px;
   .header-wrapper {
     background: rgba(0, 0, 0, 0.7);
-    height: 100vh;
-    max-height: 1000px;
+    height: calc(100vh - 230px);
+    max-height: calc(1000px - 230px);
   }
 }
 
@@ -18,7 +18,7 @@ nav {
   z-index: 10;
   width: 100%;
   max-width: 1920px;
-  transition: .3s;
+  transition: 0.3s;
   .btn {
     color: $white;
   }
@@ -74,6 +74,9 @@ nav {
           font-weight: 500;
           font-size: 14px;
           text-transform: uppercase;
+          a {
+            color: #fff;
+          }
         }
         .search svg {
           width: 17px;
@@ -113,8 +116,8 @@ nav {
           font-weight: 500;
           font-size: 16px;
         }
-        .btn{
-          svg{
+        .btn {
+          svg {
             width: 18px;
             height: 18px;
           }
@@ -123,11 +126,12 @@ nav {
     }
   }
 }
-.showbg{
-  background:rgba(0, 0, 0, 0.8);
+.showbg {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .text-body {
+  position: relative;
   width: 100%;
   height: 100vh;
   max-height: 1000px;
@@ -158,6 +162,112 @@ nav {
     font-size: 18px;
     line-height: 24px;
     max-width: 610px;
+  }
+  .swiper__area {
+    width: 100%;
+    height: 230px;
+    background: $bg-primary;
+  }
+}
 
+.swiper__area {
+  width: 100%;
+  height: 230px;
+  background: $bg-primary;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    background: #ffffff;
+    opacity: 0.32;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+
+  &__data {
+    height: 230px;
+
+    .swiper-item {
+      height: 230px;
+      position: relative;
+      &:hover {
+        img {
+          opacity: 1;
+        }
+        .swiper-item-content {
+          transition: 0.3s !important;
+          background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)
+          );
+        }
+      }
+      img {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+      }
+      &-content {
+        transition: 0.3s !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 25px;
+        cursor: pointer;
+        background: transparent;
+
+        h4 {
+          font-weight: 700;
+          font-size: 24px;
+          color: white;
+          margin-bottom: 8px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: white;
+        }
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: white;
+    transform: scale(0.6);
+
+    &:after {
+      min-width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+    }
+  }
+  .swiper-button-prev {
+    left: 120px;
+  }
+  .swiper-button-next {
+    right: 120px;
   }
 }

@@ -1,0 +1,63 @@
+.apply__now {
+  margin-bottom: 150px;
+  margin-top: 55px;
+
+  &__wrapper {
+    form {
+      width: 80%;
+      p {
+        font-weight: 500;
+        font-size: 32px;
+        color: $black;
+        margin-bottom: 24px;
+      }
+      select,
+      input {
+        width: 100%;
+        padding: 16px 20px;
+        border-radius: 8px;
+        outline: none;
+        background-color: #fff;
+        outline: none;
+        font-weight: 400;
+        font-size: 16px;
+        border: 1px solid rgba(215, 213, 213, 0.8);
+      }
+      label {
+        width: 50%;
+        display: inline-block;
+        margin-bottom: 85px;
+      }
+      .primary__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        label {
+          width: 49%;
+          margin-bottom: 40px;
+          font-weight: 500;
+          font-size: 18px;
+          color: $black;
+          input,
+          select {
+            margin-top: 8px;
+          }
+        }
+        .btn_submit {
+          flex: 1;
+          margin-bottom: 55px;
+          background:transparent;
+          border: none;
+        }
+        .apply__next__btn {
+          width: 100%;
+          text-align: center;
+        }
+        .step__img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

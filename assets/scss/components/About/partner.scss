@@ -1,0 +1,27 @@
+.partner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 24px;
+
+  &__item {
+    width: 100%;
+    background: #f7faff;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    border-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    
+    p {
+      font-weight: 400;
+      font-size: 22px;
+      color: $black;
+      margin-bottom: 24px;
+    }
+  }
+}

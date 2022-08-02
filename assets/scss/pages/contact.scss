@@ -1,0 +1,148 @@
+.contact {
+  margin-top: 55px;
+  margin-bottom: 150px;
+  &__wrapper {
+    &__map {
+      position: relative;
+      margin-bottom: 250px;
+      &__info {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translate(30%, 50%);
+        background: #eef6ff;
+        border-radius: 8px;
+        padding: 32px;
+        width: 440px;
+
+        span {
+          color: #667b8c;
+          font-weight: 400;
+          font-size: 18px;
+          margin-bottom: 8px;
+        }
+        p {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 32px;
+          color: $black;
+          margin-bottom: 24px;
+        }
+      }
+    }
+    &__text {
+      margin-bottom: 55px;
+      p {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 32px;
+        color: $black;
+        margin-bottom: 24px;
+      }
+    }
+    &__table {
+      margin-bottom: 95px;
+      width: 80%;
+      .thead,
+      .tbody {
+        .tr {
+          width: 100%;
+          display: flex;
+          align-items: center;
+
+          .th {
+            flex: 1;
+            padding: 14px 24px;
+            font-weight: 400;
+            font-size: 16px;
+            color: $black;
+            border: 0.5px solid rgba(45, 108, 177, 0.32);
+            &:last-child {
+              flex: 2;
+            }
+          }
+        }
+      }
+      .thead {
+        background: rgba(45, 108, 177, 0.1);
+        .tr .th {
+          font-weight: 500;
+        }
+      }
+    }
+    &__form {
+      width: 100%;
+      p {
+        font-weight: 500;
+        font-size: 40px;
+        color: $black;
+        margin-bottom: 32px;
+      }
+      form {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        gap: 70px;
+        .submit__btn {
+          border: none;
+          outline: none;
+          background: transparent;
+        }
+        & > div {
+          flex: 1;
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          input {
+            flex: 1;
+            width: 100%;
+            border: none;
+            border-bottom: 0.5px solid rgba(128, 128, 128, 0.403);
+            padding: 8px;
+            margin-bottom: 56px;
+            font-weight: 400;
+            font-size: 16px;
+            color: $black;
+            outline: none;
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+          textarea {
+            width: 100%;
+            padding: 8px;
+            border: 0.5px solid rgba(128, 128, 128, 0.403);
+            height: 220px;
+            outline: none;
+          }
+
+          .check__and__send {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+
+            input {
+              margin-bottom: 0;
+              flex: 0;
+              &:after {
+                content: " Я согласен с условиями обработки персональных данных";
+                width: 240px;
+                display: inline-block;
+                margin-left: 30px;
+                margin-top: -8px;
+                font-family: "Effra";
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 24px;
+                color: $black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

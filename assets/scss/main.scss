@@ -9,10 +9,19 @@
 @import "./components/Diplomat/events.scss";
 @import "./components/Menu/layout.scss";
 @import "./components/Menu/content.scss";
+@import "./components/About/team.scss";
+@import "./components/About/partner.scss";
 
 // pages
 @import "./pages/index.scss";
 @import "./pages/news_and_events.scss";
+@import "./pages/contact.scss";
+@import "./pages/apply.scss";
+@import "./pages/applyStep2.scss";
+
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   box-sizing: border-box;
@@ -20,6 +29,7 @@
   margin: 0;
   font-family: "Effra";
 }
+
 h1,
 h2,
 h3,
@@ -29,7 +39,6 @@ h4 {
 body {
   max-width: 1920px;
   margin: 0 auto;
-  // overflow-x: hidden;
 }
 
 .btn {
@@ -60,7 +69,6 @@ a {
   position: absolute;
   right: 0px;
   top: 0;
-  // background-image: url("~/assets/icons/borderImg.svg");
   background-image: url(http://diplomat.university/_nuxt/img/backImage.b5cf600.png);
   background-repeat: repeat-y;
   background-size: 171px;

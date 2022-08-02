@@ -19,6 +19,7 @@ export default {
     // Load a Node.js module directly (here it's a Sass file)
 
     // CSS file in the project
+    "swiper/css/swiper.min.css",
     "~/assets/css/main.css",
     // SCSS file in the project
     "~/assets/scss/main.scss",
@@ -28,7 +29,12 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {
+      src: `~/plugins/VueAwesomeSwiper.js`,
+      mode: 'client'
+    }
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

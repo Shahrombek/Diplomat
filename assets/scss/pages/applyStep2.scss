@@ -1,0 +1,93 @@
+.files {
+  margin-top: 80px;
+  &__wrapper {
+    &__list {
+      p {
+        font-weight: 500;
+        font-size: 32px;
+        color: $black;
+        margin-bottom: 48px;
+      }
+      &__item {
+        span {
+          font-weight: 500;
+          font-size: 24px;
+          color: $black;
+          display: inline-block;
+          margin-bottom: 24px;
+        }
+        & > div {
+          display: flex;
+          align-items: start;
+          gap: 24px;
+          margin-bottom: 88px;
+          input {
+            display: none;
+          }
+          label {
+            width: 220px;
+            height: 200px;
+            background: rgba(17, 183, 146, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            svg {
+              width: 35px !important;
+              height: 50px;
+              color: #11b792;
+            }
+          }
+          .file__content {
+            width: 400px;
+            height: 200px;
+            background: #fff9ed;
+            border-radius: 8px;
+            padding: 28px;
+           
+            span {
+              font-weight: 500;
+              font-size: 20px;
+              color: $black;
+              display: inline-block;
+              margin-bottom: 16px;
+            }
+            p{
+              font-size: 18px;
+              color: #11b792;
+              font-weight: 500;
+              margin-bottom: 8px;
+            }
+            ul {
+              padding: 0 20px;
+              li {
+                font-weight: 400;
+                font-size: 16px;
+                color: $black;
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+      }
+      .submit__btn {
+        border: none;
+        outline: none;
+        background: transparent;
+        margin-bottom: 55px;
+
+        .primary__btn {
+          width: 640px;
+          text-align: center;
+        }
+      }
+      .step__img{
+        margin-bottom: 145px;
+        img{
+          width: 60%;
+        }
+      }
+    }
+  }
+}

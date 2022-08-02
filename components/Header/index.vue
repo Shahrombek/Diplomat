@@ -27,7 +27,9 @@
                   </div>
                 </div>
                 <div class="navbar-top-apply">
-                  <button class="btn apply">Apply Now</button>
+                  <button class="btn apply">
+                    <nuxt-link to="/apply">Apply Now</nuxt-link>
+                  </button>
                   <button class="btn search">
                     <fa :icon="['fas', 'magnifying-glass']" />
                   </button>
@@ -97,20 +99,52 @@
           </div>
         </div>
       </div>
+      <div class="swiper__area">
+        <div class="container">
+          <client-only>
+            <swiper :options="swiperOption" class="swiper__area__data">
+              <swiper-slide v-for="(item, index) in data" :key="index">
+                <div class="swiper-item">
+                  <img :src="item.img" alt="logo" />
+                  <div class="swiper-item-content">
+                    <h4>{{ item.title }}</h4>
+                    <p>{{ item.info }}</p>
+                  </div>
+                </div>
+              </swiper-slide>
+            </swiper>
+          </client-only>
+        </div>
+        <div class="swiper-button-prev" slot="button-prev"></div>
+        <div class="swiper-button-next" slot="button-next"></div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import SwiperData from "~/data/HeaderSwiperData";
 export default {
   name: "header-component",
   data() {
     return {
       is_navbar_active: false,
+      data: null,
+      swiperOption: {
+        loop: true,
+        slidesPerView: 4,
+        autoplay: true,
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      },
     };
   },
- 
+
   mounted() {
+    this.data = SwiperData;
     window.addEventListener("scroll", () => {
       window.scrollY > 160
         ? (this.is_navbar_active = true)
